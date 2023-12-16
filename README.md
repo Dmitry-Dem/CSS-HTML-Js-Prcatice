@@ -13,11 +13,11 @@ The project is created based on a free Figma layout. The main goals of the proje
 
 ### Desktop View
 
-![Desktop View](https://github.com/Dmitry-Dem/CSS-HTML-Js-prcatice/blob/main/Responsive-Landing-Page_Agency-Website/web_page_pc.png)
+![Desktop View](https://github.com/Dmitry-Dem/CSS-HTML-Js-prcatice/blob/main/Responsive-Landing-Page_Agency-Website/desktop_view.png)
 
 ### Mobile View
 
-![Mobile View](https://github.com/Dmitry-Dem/CSS-HTML-Js-prcatice/blob/main/Responsive-Landing-Page_Agency-Website/web_page_mobile.png)
+![Mobile View](https://github.com/Dmitry-Dem/CSS-HTML-Js-prcatice/blob/main/Responsive-Landing-Page_Agency-Website/mobile_view.png)
 
 ## How to Run the Project
 
