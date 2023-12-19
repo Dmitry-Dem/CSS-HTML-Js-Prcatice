@@ -1,0 +1,15 @@
+:root {
+  --primary-1: white;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 1.26rem;
+  color: var(--neutral-grey);
+}
