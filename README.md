@@ -11,13 +11,21 @@ The project is created based on a free Figma layout. The main goals of the proje
 - Using Flexbox to organize the layout of elements on the page.
 - Using media queries to create an adaptive design.
 
-### Desktop View
+## Desktop View
+<details>
+  <summary>Show</summary>
+  <p align="center">
+    <img src="https://github.com/Dmitry-Dem/CSS-HTML-Js-prcatice/blob/main/Responsive-Landing-Page_Agency-Website/desktop_view.png" alt="Desktop View Image">
+  </p>
+</details>
 
-![Desktop View](https://github.com/Dmitry-Dem/CSS-HTML-Js-prcatice/blob/main/Responsive-Landing-Page_Agency-Website/desktop_view.png)
-
-### Mobile View
-
-![Mobile View](https://github.com/Dmitry-Dem/CSS-HTML-Js-prcatice/blob/main/Responsive-Landing-Page_Agency-Website/mobile_view.png)
+## Mobile View
+<details>
+  <summary>Show</summary>
+  <p align="center">
+    <img src="https://github.com/Dmitry-Dem/CSS-HTML-Js-prcatice/blob/main/Responsive-Landing-Page_Agency-Website/mobile_view.png" alt="Mobile View Image">
+  </p>
+</details>
 
 ## How to Run the Project
 
