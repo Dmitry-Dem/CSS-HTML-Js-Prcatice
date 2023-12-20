@@ -1,5 +1,13 @@
 :root {
-  --primary-1: white;
+  --primary-1: #FFBE34;
+  --primary-2: #091242;
+  --secondary-1: #F4F4F4;
+
+  --font-1: #23212A;
+  --heading-font: #1C1F35;
+  --paragraph-font: #666C89;
+
+  --logo-block-height: 10rem;
 }
 
 html,
@@ -8,8 +16,413 @@ body {
 }
 
 body {
-  font-family: Inter;
-  font-weight: 400;
-  line-height: 1.26rem;
-  color: var(--neutral-grey);
+  font-family: Krub;
+  font-weight: 500;
+  line-height: 1.51525rem;
+  color: var(--paragraph-font);
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+[class*="__container"] {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+/* header */
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo {
+  background-color: var(--primary-2);
+}
+
+.logo_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2.88rem;
+  padding-bottom: 2.88rem;
+  height: var(--logo-block-height);
+}
+
+.logo_block__link {
+  padding-right: 0.937rem;
+}
+
+.logo_address {
+  display: flex;
+  gap: 2.44rem;
+}
+
+.logo_address__item {
+  display: flex;
+  align-items: center;
+}
+
+.logo_address__image {
+  min-height: 4.25rem;
+  margin-right: 0.88rem;
+  flex: 0 0 auto;
+}
+
+/* Menu --------------------------------------------------  */
+
+.header__block {
+  position: absolute;
+  top: var(--logo-block-height);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25); /* rgba(9, 18, 66, 0.25); */
+  color: white;
+  font-weight: 600;
+  min-height: 4.875rem;
+}
+
+.header__block__container {
+  display: flex;
+  align-items: center;
+}
+
+.header__block__menu {
+  flex: 1 0 auto;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__list .menu__item:not(:last-child) {
+  padding-right: 1.88rem;
+  border-right: var(--paragraph-font) solid 1px;
+}
+
+.menu__list .menu__item:not(:first-child) {
+  padding-left: 1.88rem;
+}
+
+.header_action {
+  display: flex;
+}
+
+.header_action__links {
+  display: flex;
+  align-items: center;
+  margin-right: 3.12rem;
+  gap: 1.5rem;
+}
+
+.header_action__button {
+  padding: 1.75rem 3.25rem;
+  background-color: #fff;
+  color: var( --font-1);
+  line-height: 1.35025rem;
+  transition: all 0.3s;
+}
+
+.header_action__button:hover {
+  background-color: var(--primary-2);
+  color: var(--primary-1);
+}
+
+/* Menu btn */
+
+.menu_btn {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	z-index: 101;
+	overflow: hidden;
+  display: none;
+}
+
+.menu_btn span {
+	width: 30px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	transition: all 0.5s;
+  z-index: 50;
+}
+
+.menu_btn span:nth-of-type(2) {
+	top: calc(50% - 7px);
+}
+
+.menu_btn span:nth-of-type(3) {
+	top: calc(50% + 7px);
+}
+
+.menu_btn.active span:nth-of-type(1) {  
+  display: none;
+}
+
+.menu_btn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);  
+}
+
+.menu_btn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg); 
+}
+
+.menu.active {
+  display: flex;
+  position: fixed;
+  color: var(--primary-1);
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  min-height: 100vh;
+  top: 0;
+  background-color: var(--primary-2);
+  border-right: var(--primary-1) solid 3px;
+  transform: translateX(0);
+  transition: all 0.7s; 
+}
+
+.menu {
+  position: relative;
+  z-index: 100;
+}
+
+/*  Logistics ----------------------------------- */
+
+.logistics {
+  background: url("../img/home/logistics/photo.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  max-height: 62.1865rem;
+}
+
+.logistics__container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15.7rem;
+  padding-bottom: 15.7rem;
+}
+
+.logistics__mark {
+  margin-bottom: 0.5rem;
+}
+
+.logistics__title {
+  color: #FFF;
+  font-family: Rubik;
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: normal; 
+  max-width: 34.625rem;
+  margin-bottom: 0.38rem;
+}
+
+.logistics__text {
+  margin-bottom: 1.5rem;
+  color: #FFF;
+  max-width: 35.6875rem; 
+}
+
+.logistics__button a {
+  padding: 1.19rem 2.94rem;
+  display: block;
+  position: relative;
+  z-index: 50;
+}
+
+.logistics__button {
+  position: relative;
+  overflow: hidden;
+}
+
+.logistics__button::before {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background-color: white;
+  right: -0.8rem;
+  bottom: -1rem;
+}
+
+.logistics__button:hover::before {
+  width: 10rem;
+  height: 10rem;
+  right: -2rem;
+  bottom: -3rem;
+}
+
+
+/*  ----------------------------------- */
+/*  ----------------------------------- */
+/*  ----------------------------------- */
+/*  ----------------------------------- */
+/*  ----------------------------------- */
+
+
+/*  Common ----------------------------------- */
+
+.section_mark {
+  background: rgba(4, 28, 55, 0.50); 
+  border-left: var(--primary-1) solid 0.256rem;
+  color: #fff;
+  width: max-content;
+  padding: 0 0.5rem;
+}
+
+.section_text {
+}
+
+.section_button {
+  max-width: max-content;
+  background: linear-gradient(to right, #FFB629, #FFDA56, #FFD7A6);
+  color: var(--font-1);
+  font-weight: 600;
+  line-height: 1.35025rem;
+}
+
+/* Desktop */
+
+@media (max-width: 1230px) {
+  [class*="__container"] {
+    max-width: 970px;
+  }
+
+  /* Menu */
+
+  .logo_address__item {
+    flex-direction: column;
+  }
+
+  /* Logistics */
+
+  .logistics {
+    background-size: cover;
+    background-position: left -15rem center;
+    max-height: 45.1865rem;
+  }
+
+  .logistics__container {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+}
+
+/* Tablet */
+
+@media (max-width: 991.98px) {
+  [class*="__container"] {
+    max-width: 750px;
+  }
+
+  /* Menu */
+
+  .header__block__container {
+    justify-content: end;
+    position: relative;
+  }
+
+  .logo_address__image {
+    width: 3rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo_address__info {
+    font-size: 0.85rem;
+  }
+
+  .header__block__action {
+    flex: 1 1 auto;
+  }
+
+  /* Menu btn */
+
+  .menu_btn {
+    display: flex;
+    position: absolute;
+    left: 1rem;
+  }
+  
+  .menu_btn.active {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+  }
+  
+  .menu_btn.active span {
+    background-color: var(--primary-1);
+  }
+
+  .menu {
+    transform: translateX(-300%);
+    position: absolute;
+    left: 0;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4rem;
+  }
+
+  .menu__list .menu__item:not(:last-child) {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .menu__list .menu__item:not(:first-child) {
+    padding-left: 0;
+  }
+
+  .menu__link {
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .menu__link:hover {
+    background-color: var(--primary-1);
+    color: var(--primary-2);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767.98px) {
+  [class*="__container"] {
+    max-width: none;
+  }
+
+  /* Menu */
+
+  .logo_block {
+    flex-direction: column;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .logo_address__item {
+    flex-direction: row;
+  }
 }
