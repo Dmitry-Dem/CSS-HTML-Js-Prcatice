@@ -6,7 +6,7 @@
   --font-1: #23212A;
   --heading-font: #1C1F35;
   --paragraph-font: #666C89;
-
+  --gray-light: #D8D8D8;
   --logo-block-height: 10rem;
 }
 
@@ -20,6 +20,42 @@ body {
   font-weight: 500;
   line-height: 1.51525rem;
   color: var(--paragraph-font);
+}
+
+/*  Common ----------------------------------- */
+
+.section_mark {
+  background-color: rgba(232, 232, 232, 0.50);
+  border-left: var(--primary-1) solid 0.256rem;
+  color: var(--heading-font);
+  width: max-content;
+  padding: 0 0.5rem;
+}
+
+.section_title {
+  color: var(--heading-font);
+  font-family: Rubik;
+  font-size: 2.1875rem;
+  font-weight: 600;
+  line-height: normal; 
+}
+
+.section_text {
+}
+
+.section_button {
+  max-width: max-content;
+  background: linear-gradient(to right, #FFB629, #FFDA56, #FFD7A6);
+  color: var(--font-1);
+  font-weight: 600;
+  line-height: 1.35025rem;
+}
+
+.section_heading {
+  color: var(--heading-font);
+  font-family: Rubik;
+  font-size: 1.5625rem;
+  font-weight: 400;
 }
 
 .wrapper {
@@ -220,7 +256,9 @@ body {
 }
 
 .logistics__mark {
+  background-color: rgba(4, 28, 55, 0.50); 
   margin-bottom: 0.5rem;
+  color: white;
 }
 
 .logistics__title {
@@ -270,33 +308,62 @@ body {
 }
 
 
-/*  ----------------------------------- */
-/*  ----------------------------------- */
-/*  ----------------------------------- */
-/*  ----------------------------------- */
-/*  ----------------------------------- */
+/* Offerings ----------------------------------- */
 
-
-/*  Common ----------------------------------- */
-
-.section_mark {
-  background: rgba(4, 28, 55, 0.50); 
-  border-left: var(--primary-1) solid 0.256rem;
-  color: #fff;
-  width: max-content;
-  padding: 0 0.5rem;
+.offerings {
+  margin: 7.56rem 0;
 }
 
-.section_text {
+.offerings__container {
+  display: grid;
+  grid-template-rows: 10rem 10rem;
+  grid-template-columns: 18.375rem 1fr 1fr;
+  column-gap: 5.2rem;
 }
 
-.section_button {
-  max-width: max-content;
-  background: linear-gradient(to right, #FFB629, #FFDA56, #FFD7A6);
-  color: var(--font-1);
-  font-weight: 600;
-  line-height: 1.35025rem;
+.offerings__body {
+  grid-row: span 2;
 }
+
+.offerings__mark {
+  margin-bottom: 1.12rem;
+}
+
+.offerings__title {
+  max-width: 18.375rem;
+}
+
+.offerings_item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.offerings_item__image{
+  width: 3.126rem;
+  height: 3.126rem;
+}
+
+.offerings_item__body {
+  padding-left: 1.56rem;
+  border-left: var(--gray-light) solid 1px;
+  height: 7.1875rem;
+  max-width: 18.475rem;
+}
+
+.offerings_item__body_title {
+  margin-bottom: 0.81rem;
+}
+
+.offerings_item__body_text {
+}
+
+/*  ----------------------------------- */
+/*  ----------------------------------- */
+/*  ----------------------------------- */
+/*  ----------------------------------- */
+
+
+
 
 /* Desktop */
 
@@ -324,6 +391,25 @@ body {
     padding-bottom: 10rem;
   }
 
+  /* Offerings ----------------------------------- */
+
+  .offerings__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .offerings__body {
+    grid-row: 1;
+    grid-column: span 2;
+    justify-self: center;
+    margin-bottom: 2rem;
+  }
+
+  .offerings_item__body {
+    height: max-content;
+    margin-bottom: 2rem;
+  }
 }
 
 /* Tablet */
@@ -402,6 +488,44 @@ body {
   .menu__link:hover {
     background-color: var(--primary-1);
     color: var(--primary-2);
+  }
+
+  /* Logistics ----------------------------------- */
+
+  .logistics__container {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+  }
+
+  /* Offerings ----------------------------------- */
+
+  .offerings {
+    margin: 5rem 0;
+  }
+
+  .offerings__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .offerings__body {
+    grid-column: 1;
+    margin-bottom: 4rem;
+  }
+
+  .offerings_item {
+    display: flex;
+    justify-content: start;
+    max-width: max-content;
+    margin: auto;
+  }
+
+  .offerings_item__image {
+    margin-right: 2rem;
+  }
+
+  .offerings_item__body {
+    max-width: 30rem;
   }
 }
 
