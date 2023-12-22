@@ -6,7 +6,8 @@
   --font-1: #23212A;
   --heading-font: #1C1F35;
   --paragraph-font: #666C89;
-  --gray-light: #D8D8D8;
+  --gray-light-1: #D4D4D4;
+  --gray-light-2: #D8D8D8;
   --logo-block-height: 10rem;
 }
 
@@ -345,7 +346,7 @@ body {
 
 .offerings_item__body {
   padding-left: 1.56rem;
-  border-left: var(--gray-light) solid 1px;
+  border-left: var(--gray-light-2) solid 1px;
   height: 7.1875rem;
   max-width: 18.475rem;
 }
@@ -354,10 +355,149 @@ body {
   margin-bottom: 0.81rem;
 }
 
-.offerings_item__body_text {
+/* Advantages ---------------------------------- */
+
+.advantages {
+  position: relative;
 }
 
-/*  ----------------------------------- */
+.advantages__decoration {
+  position: absolute;
+  z-index: -1;
+  height: 31.5rem;
+  width: 100%;
+  background: url("../img/home/advantages/photo_1.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.advantages__decoration::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #091242 -11.11%, rgba(9, 18, 66, 0.00) 90.28%);
+}
+
+.advantages__container {
+  position: relative;
+  top: 23rem;
+  margin-bottom: 23rem;
+  background-color: white;
+  padding: 5.5rem;
+  display: grid;
+  grid-template-rows: auto 14.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.advantages__body {
+  max-width: 29.5rem;
+}
+
+.advantages__body .body_info__mark, .body_info__title {
+  margin-bottom: 0.75rem;
+}
+
+.advantages__body .body_info__text:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.advantages__images {
+  grid-row: span 2;
+  position: relative;
+}
+
+.advantages__images__first_image {
+  position: absolute;
+  right: 0;
+}
+
+.advantages__images__second_image {
+  position: absolute;
+  z-index: 50;
+  bottom: 0;
+  left: -3.5rem;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 3rem;
+  background: white;
+}
+
+.advantages__statistic {
+  margin-top: 1.56rem;
+  padding-right: 4rem;
+}
+
+.advantages__statistic img {
+  min-width: 58px;
+  min-height: 58px;
+}
+
+.advantages__statistic .advantages__statistic__item:not(:last-child){
+  margin-bottom: 1.5rem;
+}
+
+.advantages__statistic__item {
+  display: flex;
+  align-items: center;
+}
+
+.advantages__statistic__item_heading {
+  margin-left: 0.75rem;
+}
+
+.advantages__results {
+  margin-top: 4rem;
+  min-height: 9rem;
+  grid-column: span 2;
+  display: flex;
+}
+
+.advantages__results .result__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: var(--gray-light-1) solid 1px;
+  border-bottom: var(--gray-light-1) solid 1px;
+  flex: 1 1 50%;
+}
+
+.advantages__results .result__item > * {
+  margin-right: 0.7rem;
+}
+
+.advantages__results .result__item:not(:first-child) {
+  border-left: var(--gray-light-1) solid 1px;
+}
+
+.advantages__results .result__item__title{
+  color: var(--heading-font);
+  font-family: Rubik;
+  font-size: 3.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal; 
+}
+
+.advantages__results .result__item__decoration {
+  width: 1.0625rem;
+  height: 1.0625rem; 
+  background: linear-gradient(94deg, #FFB629 -1.21%, #FFDA56 58.66%, #FFD7A6 116.84%); 
+}
+
+.advantages__results .result__item__description {
+  color: var(--heading-font);
+  font-family: League Spartan;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 /*  ----------------------------------- */
 /*  ----------------------------------- */
 /*  ----------------------------------- */
@@ -526,6 +666,39 @@ body {
 
   .offerings_item__body {
     max-width: 30rem;
+  }
+
+  /*  Advantages ------------------------------- */
+
+  .advantages__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .advantages__body {
+    max-width: max-content;
+  }
+
+  .advantages__images {
+    display: none;
+  }
+
+  .advantages__statistic {
+    margin-top: 1.56rem;
+    padding-right: 0;
+    grid-row: 2;
+  }
+
+  .advantages__results {
+    margin-top: 1.56rem;
+  }
+
+  .advantages__results .result__item__title{
+    font-size: 2.125rem;
+  }
+
+  .advantages__results .result__item__description {
+    max-width: min-content;
   }
 }
 
