@@ -787,7 +787,78 @@ body {
   color: var(--heading-font);
 }
 
-/*   ----------------------------------- */
+/* Transporters  ----------------------------------- */
+
+.transporters {
+}
+
+.transporters__container {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.transporters__header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+}
+
+.transporters__header__mark {
+  margin-bottom: 1rem;
+}
+
+.transporters__header__title {
+}
+
+.transporters__body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.transporters__body__item {
+  flex: 0 1 30%;
+}
+
+.transporters__item__image {
+  position: relative;
+}
+
+.transporters__item__image > img {
+  width: 100%;
+}
+
+.transporters__item__image__links {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(50%);
+  padding: 1.25rem 1rem;
+  background: linear-gradient(0deg, #FFB629 -1.21%, #FFDA56 58.66%, #FFD7A6 116.84%);
+  display: flex;
+  flex-direction: row;
+  gap: 1.57rem;
+  align-items: center;
+  max-height: 9.45rem;
+}
+
+.item_link_block {
+}
+
+.transporters__item__content {
+  background-color: var(--heading-font);
+  padding: 2.62rem 2.12rem 1.25rem 2.12rem;
+}
+
+.transporters__item__title {
+  
+}
+.transporters__item__text {
+  color: white;
+}
+
+
 /*   ----------------------------------- */
 /*   ----------------------------------- */
 /*   ----------------------------------- */
@@ -1039,6 +1110,20 @@ body {
 
   .testimonial__body .testimonial__item:not(:first-child) {
     display: none;
+  }
+
+  /* Transporters  ----------------------------------- */
+
+  .transporters__body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .transporters__body__item {
+    flex: 0 0 45%;
   }
 }
 
