@@ -422,9 +422,9 @@ body {
   height: 31.5rem;
   width: 100%;
   background: url("../img/home/advantages/photo_1.png");
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: center center;
 }
 
 .advantages__decoration::before {
@@ -1558,6 +1558,16 @@ li.blog_list__item {
 
   .offerings_item__body {
     max-width: 30rem;
+  }
+
+  /* Transporting ----------------------------------- */
+
+  .advantages__decoration {
+    height: 15.5rem;
+  }
+
+  .advantages__container {
+    top: 15.5rem;
   }
 
   /*  Advantages ------------------------------- */
